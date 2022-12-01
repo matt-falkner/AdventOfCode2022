@@ -36,6 +36,16 @@ func MostCaloriesElf(Elfs []Elf) Elf {
 	return Elfs[0]
 }
 
+func CaloriesOfTop3Elfs(Elfs []Elf) int {
+	sort.Slice(Elfs[:], func(i, j int) bool {
+		return Elfs[i].totalCalories > Elfs[j].totalCalories
+	})
+
+	var calories int = Elfs[0].totalCalories + Elfs[1].totalCalories + Elfs[2].totalCalories
+
+	return calories
+}
+
 func ParseElfLedger(filename string) []Elf {
 	var Elfs []Elf
 
