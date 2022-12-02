@@ -1,7 +1,7 @@
 package main
 
 import (
-	"day2/parser"
+	"P2/parser"
 	"fmt"
 )
 
